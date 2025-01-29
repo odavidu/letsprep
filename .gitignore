@@ -1,0 +1,26 @@
+# User-specific files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Module files
+*.iml
+
+# Logs
+.idea/*.log
+.log/
+
+# Virtual machine crash logs, see https://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IDE internal stuff
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# JetBrains IDEs
+.idea/httpRequests/
+.idea/shelf/
