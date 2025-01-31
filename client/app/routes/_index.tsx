@@ -1,7 +1,7 @@
 import type {MetaFunction} from "@remix-run/node";
 import NavBar from "~/components/navbar/NavBar";
 import {CenterAll} from "~/components/Center";
-import TextBox from "~/components/chat/TextBox";
+import ChatBox from "~/components/chat/ChatBox";
 import Button from "~/components/Button";
 
 export const meta: MetaFunction = () => {
@@ -26,14 +26,11 @@ export default function Index() {
                         Transforming how you <br/>
                         prepare for success
                     </h1>
-                    <span className="font-instrument-sans text-sm text-center">
+                    <span className="font-instrument-sans text-sm text-center mb-6">
                         Personalized practice problems and resources designed to <br/>
                         help you build confidence and achieve your goals with ease.
                     </span>
-                    <div className="my-6">
-                        <TextBox/>
-                    </div>
-                    <Button link="#" text="Learn More" fill={false} color="#393939"/>
+                    <Button link="/questions" text="Try Now" fill={false} color="#393939"/>
                 </CenterAll>
             </div>
         </div>

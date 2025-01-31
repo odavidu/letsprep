@@ -1,7 +1,7 @@
 import {FormEvent, useState} from "react";
 import { useNavigate } from "@remix-run/react";
 import { Errors, FIELDS, initFields, useFormFields, validateFields } from "~/utils/form";
-import { fetcher } from "~/utils/middleware";
+import {post} from "~/utils/middleware";
 
 export function SignupHandler() {
     const navigate = useNavigate();
@@ -41,17 +41,11 @@ export function SignupHandler() {
 
         try {
             setSubmitting(true);
-            const data = await fetcher("signup", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    first_name: formValues[FIELDS.F_NAME],
-                    last_name: formValues[FIELDS.L_NAME],
-                    email: formValues[FIELDS.EMAIL],
-                    password: formValues[FIELDS.PWD],
-                }),
+            const data = await post("signup", {
+                first_name: formValues[FIELDS.F_NAME],
+                last_name: formValues[FIELDS.L_NAME],
+                email: formValues[FIELDS.EMAIL],
+                password: formValues[FIELDS.PWD],
             });
             setSubmitting(false);
             console.log("Signup successful:", data);

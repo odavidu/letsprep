@@ -1,8 +1,8 @@
 import {useNavigate} from "@remix-run/react";
 import {Errors, FIELDS, initFields, useFormFields, validateFields} from "~/utils/form";
 import {FormEvent, useState} from "react";
-import {fetcher} from "~/utils/middleware";
 import jwt from "jsonwebtoken";
+import {post} from "~/utils/middleware";
 
 export function LoginHandler() {
     const navigate = useNavigate();
@@ -32,16 +32,9 @@ export function LoginHandler() {
 
         try {
             setSubmitting(true);
-            const data = await fetcher("login", {
-                method: "POST",
-                credentials: "include",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email: formValues[FIELDS.EMAIL],
-                    password: formValues[FIELDS.PWD],
-                }),
+            const data = await post("login", {
+                email: formValues[FIELDS.EMAIL],
+                password: formValues[FIELDS.PWD],
             });
             setSubmitting(false);
             console.log("Login successful:", data);

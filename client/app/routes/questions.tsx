@@ -1,4 +1,4 @@
-import TextBox from "~/components/chat/TextBox";
+import ChatBox from "~/components/chat/ChatBox";
 import {CenterAll} from "~/components/Center";
 
 
@@ -17,10 +17,10 @@ export const meta = () => {
 export default function QuestionsPage() {
     return (
         <div>
-            <style>{`body { background-color: #F1F1FC; }`}</style>
+            <style>{`body { overflow: hidden; background-color: #F1F1FC; }`}</style>
             <CenterAll>
                 <div className="my-6">
-                    <TextBox/>
+                    <ChatBox/>
                 </div>
             </CenterAll>
         </div>

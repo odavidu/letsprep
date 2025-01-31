@@ -21,6 +21,7 @@ func main() {
 	auth.InitJWT()
 
 	routes.InitAuthRoutes(app)
+	routes.InitChatRoutes(app)
 	routes.InitRetrievalRoutes(app)
 
 	log.Println("Starting HTTP server on http://localhost:8080")

@@ -41,8 +41,8 @@ func Login(c *fiber.Ctx) error {
 		Name:     cookie.Login,
 		Value:    token,
 		HTTPOnly: true,
-		Secure:   false, // true in production
-		SameSite: "Lax", // allow cross-origin requests
+		Secure:   false,
+		SameSite: "Lax",
 		Expires:  time.Now().Add(24 * time.Hour),
 	})
 
