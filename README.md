@@ -4,7 +4,7 @@
 
 📽️ **Demo Video**
 
-[![Watch the video](https://youtu.be/UuUDdD4tTf4)](demo.mp4)
+[![Watch the video](https://img.youtube.com/vi/UuUDdD4tTf4/0.jpg)](https://youtu.be/UuUDdD4tTf4) 
 
 ---
 
